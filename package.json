@@ -1,0 +1,15 @@
+{
+  "name": "art",
+  "version": "1.0.0",
+  "description": "social media for artists",
+  "main": "./home/home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "art"
+  ],
+  "author": "Filliphi Perez & Melqui Brito",
+  "license": "ISC",
+  "type": "module"
+}
