@@ -1,35 +1,48 @@
+
+//Criar um local de armazenamento e fazer verificação para armazenar
+const localStorageTransaction = JSON.parse(
+    localStorage.getItem('lista'));
+
+let lista = localStorage.getItem('lista') !== null ? 
+    localStorageTransaction : [];
+
 export class ListaPost{
-
-
-    lista = [{}];
 
     constructor(){}
 
     addLista(_nome) {
 
-        let random = Math.random()*10000;
-        let _id = Math.round(random);
+        let _id = Math.floor(Date.now() * Math.random()).toString(36);
 
-        const novoObjeto = {id: _id, nome: _nome};
-        this.lista.unshift(novoObjeto);
+        let novoObjeto = {id: _id, nome: _nome};
+        lista.unshift(novoObjeto);
+
+        this.updateLocalStorage();
+
+        for(var i=0;i<lista.length;i++){
+        console.log(lista[i]);
+        }
     }
 
-    showLista(){
+    showLista(element){
 
-        for(var i=0;i<this.lista.length;i++){
+        for(var i=0;i<lista.length;i++){
 
-            const ul = document.getElementById("list");
             const divNova = document.createElement("div");
             const para = document.createElement("p");
                 
-            para.innerText = this.lista[i].nome;
+            para.innerText = lista[i].nome;
 
             divNova.appendChild(para);
-            ul.appendChild(divNova);
+            element.appendChild(divNova);
 
-            console.log(this.lista[i])
+            console.log(lista[i]);
         }
-        return this.lista;
+        return lista;
+    }
+    
+    updateLocalStorage = () => {
+        localStorage.setItem('lista', JSON.stringify(lista));
     }
 
 }
