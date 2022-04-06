@@ -11,5 +11,8 @@
   ],
   "author": "Filliphi Perez & Melqui Brito",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }

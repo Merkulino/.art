@@ -1,0 +1,27 @@
+div#headContainer {
+    background-color: aqua;
+    
+    max-width: 95%;
+}
+
+div#imgPerfilDiv{
+    background-color: aquamarine;
+    max-width: 250px;
+    margin-right: 20px;
+}
+
+img#perfilImg{
+
+    border-radius: 50%;
+    min-width: 100%;
+}
+
+div#feedPost{
+    background-color: darkcyan;
+    width: 60%;
+    
+}
+
+div#listItem{
+    background-color: bisque;
+}

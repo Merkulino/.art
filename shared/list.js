@@ -29,6 +29,7 @@ export class ListaPost{
         for(var i=0;i<lista.length;i++){
 
             const divNova = document.createElement("div");
+            divNova.setAttribute('id', 'listItem');
             const para = document.createElement("p");
                 
             para.innerText = lista[i].nome;
