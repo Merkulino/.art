@@ -1,27 +1,42 @@
-div#headContainer {
+div#container {
     background-color: aqua;
-    
+
+    margin-top: 20px;
     max-width: 95%;
+}
+
+body{
+    background-color: antiquewhite;
 }
 
 div#imgPerfilDiv{
     background-color: aquamarine;
     max-width: 250px;
-    margin-right: 20px;
 }
 
 img#perfilImg{
-
-    border-radius: 50%;
     min-width: 100%;
 }
 
-div#feedPost{
-    background-color: darkcyan;
-    width: 60%;
+#usernameCaption{
+    color: black;
+    font-size:15pt;
     
+}
+
+div#feedPost{
+    background-color: darkcyan;    
+}
+
+div#parentDivFeed{
+    background-color:aliceblue;
 }
 
 div#listItem{
     background-color: bisque;
+}
+
+div#rightDiv{
+    background-color: blueviolet;
+    margin-right: 0px;
 }

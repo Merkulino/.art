@@ -11,11 +11,17 @@ var btSubmit = document.getElementById('btSubmit');
 //Lista de objetos
 btSubmit.onclick = function(){
 
-    //Fazer validações do post e add numa lista
+    //Fazer validações do post 
+
+    lista.verifyFeed();
     
     post.setNome = txtBox.value;
+    const ul = document.getElementById('list');
 
-    lista.addLista(post.getNome);
+    if(true){
+      lista.addLista(post.getNome, ul );  
+    }
+    
    
 }
 

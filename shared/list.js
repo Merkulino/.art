@@ -10,7 +10,13 @@ export class ListaPost{
 
     constructor(){}
 
-    addLista(_nome) {
+    //Verificar se contem post no JSON e ja criar elemento 
+
+    verifyFeed(){
+        
+    }
+
+    addLista(_nome, element) {
 
         let _id = Math.floor(Date.now() * Math.random()).toString(36);
 
@@ -22,22 +28,50 @@ export class ListaPost{
         for(var i=0;i<lista.length;i++){
         console.log(lista[i]);
         }
+
+            const newDiv = document.createElement("div");
+            newDiv.setAttribute('id', 'listItem');
+            const para = document.createElement("p");
+                
+            para.innerText = novoObjeto.nome;
+
+            newDiv.appendChild(para);
+            element.insertBefore(newDiv, element.firstChild);
+            
     }
 
     showLista(element){
 
+        if(element.hasChildNodes()){
+            /*const prevParentDiv = document.getElementById('parentDivFeed');
+            const newParentDiv = createElement("div");
+            newParentDiv.setAttribute('id', 'parentDivFeed');
+
+            prevParentDv.replaceChildren(newParentDiv, prevParentDiv.childNodes);
+
+            element.appendChild(ne);*/ console.log('Caiu aqui')
+        }else{
+            const parentDiv = document.createElement("div");
+            parentDiv.setAttribute('id', 'parentDivFeed');
+            element.appendChild(parentDiv);  console.log('sem elemetno')
+        
+        
+
         for(var i=0;i<lista.length;i++){
 
-            const divNova = document.createElement("div");
-            divNova.setAttribute('id', 'listItem');
+            const newDiv = document.createElement("div");
+            newDiv.setAttribute('id', 'listItem');
             const para = document.createElement("p");
                 
             para.innerText = lista[i].nome;
 
-            divNova.appendChild(para);
-            element.appendChild(divNova);
+            newDiv.appendChild(para);
+            parentDiv.appendChild(newDiv);
+            
 
             console.log(lista[i]);
+        }
+            
         }
         return lista;
     }

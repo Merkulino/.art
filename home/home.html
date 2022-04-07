@@ -13,56 +13,67 @@
 </head>
 <body>
 
-    <div class="container" id="headContainer">
-        <div class="h-100 row align-items-center ">
+    <div class="container" id="container"> 
 
-            <div id="imgPerfilDiv">
-                <figure class="figure">
-                    <img class="figure-img img-fluid rounded-circle cover-image" id="perfilImg" 
-                    src="https://st.depositphotos.com/1780879/3816/i/600/depositphotos_38166573-stock-photo-trees-with-sunbeams.jpg/400x300">
-                    <figcaption class="figure-caption text-center">Nome de Usuario</figcaption>
-                  </figure>
-                <img>
+        
+        <div class="row ">
+            <div class="col-2" style="background-color: blue;">
+                <div id="imgPerfilDiv">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded-circle" id="perfilImg"
+                        src="https://s2.glbimg.com/SkyLTd6VJy8WiUMg5L6EeUwgyMw=/0x0:620x548/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/B/t/limPwzQmSeI4WJO7haZg/2012-08-15-mf1.jpg">
+                        <figcaption class="figure-caption text-center" id="usernameCaption">Nome de Usuario</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="table" style="background-color: brown;">
+                    CATEGORIA
+                    <ul>
+                        <li>
+                            <p>TEstes</p>
+                        </li>
+                        <li>
+                            <p>TEstes</p>
+                        </li>
+                        <li>
+                            <p>TEstes</p>
+                        </li>
+                        <li>
+                            <p>TEstes</p>
+                        </li>
+                        <li>
+                            <p>TEstes</p>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+
+            <div class="col-8" id="feed" back>
+
+                <div class="feedContent">
+                    <div id="feedPost">
+                        DIV de FEED <br><br>
+                        <textarea class="form-control" id="txtBox" style="height: 70px;margin-bottom:10px;" placeholder="Whats on your mind..."></textarea>
+                        <button class="btn btn-primary" type="submit" id="btSubmit">Submit</button>
+                        <button class="btn btn-primary" id="bt">Listar</button>
+                    </div>
+                    <div  style="background-color: burlywood;">
+                        <p>FEED</p>
+                        <div id="list"></div>
+                        <button class="btn btn-primary">
+                            <a style="color: black" href="../perfil/perfil.html">Perfil</a>
+                        </button>
+                    </div>
+                </div>
+               
+            </div>    
+
+                <div class="sm-col" id="rightDiv">
+                    CHAT
+                </div>
             </div>
 
-            <div class="col-6" id="feedPost" >
-                DIV de publicação de conteudo <br><br>
-                <textarea class="form-control" id="txtBox" style="height: 70px;margin-bottom:10px;" placeholder="Whats on your mind..."></textarea>
-                <button class="btn btn-primary" type="submit" id="btSubmit">Submit</button>
-                <button class="btn btn-primary" id="bt">Listar</button>
-            </div>
-
-        </div> <br><br>
-
-         <div class="row">
-            <div class="col-2" style="background-color: brown;">
-                CATEGORIA 
-                <p>tsetes</p>
-                <p>tsetes</p>
-                <p>tsetes</p>
-                <p>tsetes</p>
-            </div>
-            
-            <div class="col-6" style="background-color: burlywood;">
-
-                <ul id="list">
-                    <h3>FEED</h3>
-                </ul>
-
-                <button class="btn btn-primary">
-                    <a style="color: black" href="../perfil/perfil.html"> Perfil
-                </button>   
-            </div>
-            <div class="col" style="background-color: navy;">
-                CHAT
-            </div>
-        </div>
-
-    </div>
-
-    
-       
-    
+    </div> 
 
 </body>
 </html>
