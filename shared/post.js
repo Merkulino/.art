@@ -9,12 +9,30 @@ export class Post {
 
     lista = new ListaPost();
 
-    constructor(elementHTML, conteudoTxt){
+    constructor(){}
+
+    inserirImg(conteudoImg){
+
+        const reader = new FileReader();
+        conteudoImg.addEventListener("change", function (){
+
+            //FileReader vai converter em uma data URL e add em um localStorage 
+          
+            reader.addEventListener("load", () => {
+                const lista = localStorage.setItem('image', reader.result);
+            });
+            
+            reader.readAsDataURL(this.files[0]);
+          
+          });
+
+    }
+
+    criarPost(elementHTML, conteudoTxt){
 
         this.setConteudoTxt = conteudoTxt;
-        //this.setConteudoImg = conteudoImg
 
-        this.lista.novaPostagem(elementHTML, conteudoTxt, ); 
+        this.lista.novaPostagem(elementHTML, conteudoTxt); 
 
     }
     
