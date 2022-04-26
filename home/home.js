@@ -7,6 +7,7 @@ var post = new Post();
 var txtBox = document.getElementById('txtBox');
 var img = document.getElementById('imgSelec');
 var btSubmit = document.getElementById('btSubmit');
+var btDelete = document.getElementById('deletePost');
 const ul = document.getElementById('list');
 
 post.inserirImg(img);
@@ -24,6 +25,14 @@ btSubmit.onclick = function(){
     //Limpar txtBox essas parada  !!!
    
 }
+/*
+btDelete.onclick = function(){
+
+  console.log('APAGOu')
+
+}*/
+
+
 
 
     

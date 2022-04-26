@@ -47,11 +47,21 @@ export class ListaPost {
         const newDiv = document.createElement("div");
         newDiv.setAttribute('id', 'listItem');
         const para = document.createElement("p");
+        const button = document.createElement("button");
+        
+        button.setAttribute('id','deletePost'); 
+        button.setAttribute('class','btn btn-primary'); 
+
+        button.onclick = function(){
+            console.log('Funcionou aqui');
+        }
+
         const imgElemnt = document.createElement("img");
         imgElemnt.setAttribute('src', novoObjeto.img);
         para.innerText = novoObjeto.nome;
 
         newDiv.appendChild(imgElemnt);
+        newDiv.insertAdjacentElement('beforeend', button);
         newDiv.insertBefore(para, newDiv.firstChild);
         element.insertBefore(newDiv, element.firstChild);
             
@@ -69,18 +79,34 @@ export class ListaPost {
             const newDiv = document.createElement("div");
             newDiv.setAttribute('id', 'listItem');
             const para = document.createElement("p");
+            const button = document.createElement("button");
+            button.setAttribute('id','deletePost'); 
+            button.setAttribute('class','btn btn-primary'); 
+
+            button.onclick = function(){
+                console.log('Funcionou aqui');
+                
+            }
+
             const imgElemnt = document.createElement("img");
             
             imgElemnt.setAttribute('src', lista[i].img);  
             imgElemnt.setAttribute('id', 'imgFeed');  
             para.innerText = lista[i].nome;
 
-
             newDiv.appendChild(imgElemnt);
+            newDiv.insertAdjacentElement('beforeend', button);
             newDiv.insertBefore(para, newDiv.firstChild);
             parentDiv.appendChild(newDiv);
             
         }
+    }
+
+    deletePost(){
+
+        //lista = lista.filter(transaction => transaction.id !== ID);
+        //this.updateLocalStorage();
+
     }
     
     //Atualizar lista armazenada
