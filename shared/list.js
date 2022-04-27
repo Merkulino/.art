@@ -46,23 +46,38 @@ export class ListaPost {
 
         const newDiv = document.createElement("div");
         newDiv.setAttribute('id', 'listItem');
+        
+        //Imagem de perfil
+        const imgIconDiv = document.createElement("div");
+        imgIconDiv.setAttribute('class', 'perfilPostImgDiv');
+
+        const imgPerfil = document.createElement("img");
+        imgPerfil.setAttribute('id','perfilPostImg');
+
         const para = document.createElement("p");
-        const button = document.createElement("button");
+
+        /*const button = document.createElement("button");
         
         button.setAttribute('id','deletePost'); 
         button.setAttribute('class','btn btn-primary'); 
 
         button.onclick = function(){
             console.log('Funcionou aqui');
-        }
+        }*/
 
         const imgElemnt = document.createElement("img");
+        imgElemnt.setAttribute('id', 'imgFeed');
         imgElemnt.setAttribute('src', novoObjeto.img);
         para.innerText = novoObjeto.nome;
 
         newDiv.appendChild(imgElemnt);
-        newDiv.insertAdjacentElement('beforeend', button);
+        //newDiv.insertAdjacentElement('beforeend', button);
         newDiv.insertBefore(para, newDiv.firstChild);
+
+        //img de perfil
+        imgIconDiv.appendChild(imgPerfil);
+        newDiv.insertBefore(imgIconDiv, newDiv.firstChild);
+
         element.insertBefore(newDiv, element.firstChild);
             
     }
@@ -78,25 +93,49 @@ export class ListaPost {
 
             const newDiv = document.createElement("div");
             newDiv.setAttribute('id', 'listItem');
+
+
+            //Conteudo de publicação
+            const divPubli = document.createElement("div");
+            divPubli.setAttribute('id', 'publiElement');
             const para = document.createElement("p");
-            const button = document.createElement("button");
-            button.setAttribute('id','deletePost'); 
-            button.setAttribute('class','btn btn-primary'); 
-
-            button.onclick = function(){
-                console.log('Funcionou aqui');
-                
-            }
-
+            para.setAttribute('id', 'txtContentPost');
             const imgElemnt = document.createElement("img");
+            
+            const usernamePost = document.createElement("p");
+            usernamePost.setAttribute('id', 'usernamePost');
+            usernamePost.innerText = 'Usuario';
+
+            //Imagem de perfil
+            const divUserInfo = document.createElement("div");
+            divUserInfo.setAttribute('id','divUserInfo');
+
+            const imgIconDiv = document.createElement("div");
+            imgIconDiv.setAttribute('class', 'perfilPostImgDiv');
+
+            const imgPerfil = document.createElement("img");
+            imgPerfil.setAttribute('id','perfilPostImg');
             
             imgElemnt.setAttribute('src', lista[i].img);  
             imgElemnt.setAttribute('id', 'imgFeed');  
             para.innerText = lista[i].nome;
 
-            newDiv.appendChild(imgElemnt);
-            newDiv.insertAdjacentElement('beforeend', button);
-            newDiv.insertBefore(para, newDiv.firstChild);
+            //AppendChild
+
+            divPubli.appendChild(imgElemnt);
+            newDiv.appendChild(divPubli);
+            //newDiv.insertAdjacentElement('beforeend', button);
+            imgElemnt.insertAdjacentElement('beforebegin', para)
+            //newDiv.insertBefore(usernamePost, newDiv.firstChild);
+
+            //img de perfil
+            imgIconDiv.appendChild(imgPerfil);
+
+            divUserInfo.insertBefore(imgIconDiv, divUserInfo.firstChild);
+            divUserInfo.appendChild(usernamePost);
+
+            newDiv.insertBefore(divUserInfo, newDiv.firstChild);
+
             parentDiv.appendChild(newDiv);
             
         }
