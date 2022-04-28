@@ -48,7 +48,7 @@ img#perfilImg{
 }
 
 #usernameCaption{
-    color: whitesmoke;
+    color: #ead8f7;
     font-size: 24px;
     font-weight: bold;
 }
@@ -107,6 +107,7 @@ span {
 }
 
 div#feedPost{
+    color: white;
     min-height: 100%; 
     background-color: #4d2e61;
     padding: 15px;
@@ -171,6 +172,8 @@ div.submitBt{
     
 }
 
+
+
 div#feedTimeLine{
     
 }
@@ -214,6 +217,54 @@ img#imgFeed{
     width: 100%;
     object-fit: cover;
     border-radius: 5pt;
+}
+
+div#divAction{
+    margin-top: 10px;
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content:initial;
+    column-gap: 8px;
+}
+
+#divAction>div{
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 0px;
+}
+
+#divAction>div:hover{
+    background-color: #eee1f733;
+}
+
+#tagA{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #ead8f7;
+}
+
+div#divLike{ 
+    width: 95px;
+}
+
+.fa-thumbs-up{
+    margin: 0px;
+}
+
+div#divComment{
+    width: 125px;
+
+}
+.fa-comment{
+    margin-right: 0px;
+}
+
+div#divShare{
+    width: 167px;
+}
+.fa-share{
+    margin-right: 0px;
+
 }
 
 
