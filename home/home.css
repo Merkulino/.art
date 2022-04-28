@@ -1,8 +1,38 @@
 
 * {
     font-family: "Source Sans Pro", sans-serif;
+    color: #ead8f7;
     outline: none;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2c0242;
+    border-radius: 5pt;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #2c0242d5;
+}
+
+button.btn-primary{
+    color: #ead8f7;
+    background-color: #70268D;
+    border-color: #70268D;
+}
+
+button.btn-primary:hover{
+    color: #ead8f7;
+    background-color: #5f2177;
+    border-color: #70268D;
 }
 
 #body{
@@ -24,18 +54,24 @@ div.container {
     padding-top: 10px;
     max-width: 95%;
     border-radius:5pt;
+    overflow: auto;
 }
+
 
 .col-2{
     background-color: #2c0242;
     margin-left: 10px;
+    padding-bottom: 45px;
     border-radius: 5pt;
+    overflow: visible;
+    border-radius: 10pt;
+    margin-bottom: 10px;
+    height:fit-content;
 }
 
 div#imgPerfilDiv{
     max-width: 250px;
     margin-left: auto;
-    
 }
 
 img#perfilImg{
@@ -56,7 +92,10 @@ img#perfilImg{
 div#cat{
     font-size: 18px;
     padding: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     border-radius: 5pt;
+
 }
 
 .tituloCat{
@@ -103,7 +142,9 @@ span {
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
-    border-radius: 5pt;
+    border-radius: 10pt;
+    margin-bottom: 10px;
+    overflow: auto;
 }
 
 div#feedPost{
@@ -209,7 +250,15 @@ div#publiElement{
 }
 
 #usernamePost{
+    font-size: 16px;
     font-weight: bold;
+    margin-bottom: 0px;
+}
+
+#profissaoTxt{
+    font-size: 14px;
+    font-weight: 400;
+    color: #eee1f7ce;
 }
 
 img#imgFeed{
@@ -273,4 +322,6 @@ div#chatDiv{
     margin-right: 10px;
     background-color: #2c0242;
     border-radius: 5pt;
+    border-radius: 10pt;
+    margin-bottom: 10px;
 }

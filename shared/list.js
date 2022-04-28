@@ -120,6 +120,10 @@ export class ListaPost {
             const usernamePost = document.createElement("p");
             usernamePost.setAttribute('id', 'usernamePost');
             usernamePost.innerText = 'Usuario';
+
+            const prof = document.createElement("p");
+            prof.setAttribute('id', 'profissaoTxt');
+            prof.innerText = 'Profissão';
             
             //action div
             const divAction = document.createElement("div");
@@ -167,6 +171,8 @@ export class ListaPost {
 
             divUserInfo.insertBefore(imgIconDiv, divUserInfo.firstChild);
             divUserInfo.appendChild(usernamePost);
+
+            divUserInfo.appendChild(prof);
 
             //action div
 
