@@ -16,24 +16,16 @@
 </head>
 <body id="body">
 
-    <!--div class="video-bg">
-        <video width="320" height="240" autoplay loop muted>
-            <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-       </video>
-    </!div-->
-
-    <div class="container"> 
+    <div class="container-fluid"> 
 
         <div class="row">
-            <div class="col-2">
+            <div class="col-md-2" id="perfilCat">
                 <div id="imgPerfilDiv">
-                    <br>
                     <figure class="figure">
                         <img class="figure-img img-fluid rounded-circle" id="perfilImg"
                         onclick="location.href='../perfil/perfil.html'"
-                        src="https://cdn.icon-icons.com/icons2/1999/PNG/512/avatar_man_people_person_profile_user_icon_123375.png">
-                        <figcaption class="figure-caption text-center" id="usernameCaption">Nome de Usuario</figcaption>
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCwiNUolGE_ybMJdnOfdtkwG0knyyporBK6A&usqp=CAU">
+                        <figcaption class="figure-caption text-center" id="usernameCaption">Username</figcaption>
                     </figure>
                 </div>
                 
@@ -42,27 +34,27 @@
                     <div class="itensCat">
                         
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-earth-americas"></i> &nbsp; Global
+                            <i id="iconCat" class="fa-solid fa-earth-americas"></i> &nbsp; Global
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-location-dot"></i> &nbsp; Zona Sul
+                            <i id="iconCat" class="fa-solid fa-location-dot"></i> &nbsp; Zona Sul
                         </a>
 
                         <a href="#" class="itemCategoria"> 
-                            <i class="fa-solid fa-location-dot"></i> &nbsp; Zona Leste
+                            <i id="iconCat" class="fa-solid fa-location-dot"></i> &nbsp; Zona Leste
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-location-dot"></i> &nbsp; Zona Norte
+                            <i id="iconCat" class="fa-solid fa-location-dot"></i> &nbsp; Zona Norte
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-location-dot"></i> &nbsp; Zona Oeste
+                            <i id="iconCat" class="fa-solid fa-location-dot"></i> &nbsp; Zona Oeste
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-magnifying-glass-location"></i> &nbsp; Outras regiões
+                            <i id="iconCat" class="fa-solid fa-magnifying-glass-location"></i> &nbsp; Outras regiões
                         </a>
                     </div>
                 </div>
@@ -72,27 +64,27 @@
                     <div class="itensCat">
                         
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-music"></i> &nbsp; Musica
+                            <i id="iconCat" class="fa-solid fa-music"></i> &nbsp; Musica
                         </a>
 
                         <a href="#" class="itemCategoria"> 
-                            <i class="fa-solid fa-film"></i> &nbsp; Cinema
+                            <i id="iconCat" class="fa-solid fa-film"></i> &nbsp; Cinema
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-spray-can" style="margin-left: 4px;"></i> &nbsp; Graffiti
+                            <i id="iconCat" class="fa-solid fa-spray-can" style="margin-left: 4px;"></i> &nbsp; Graffiti
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <span class="material-icons">draw</span> &nbsp; Art Design
+                            <span id="iconCat"pan class="material-icons">draw</span> &nbsp; Art Design
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-masks-theater"></i> &nbsp; Teatro
+                            <i id="iconCat" class="fa-solid fa-masks-theater"></i> &nbsp; Teatro
                         </a>
 
                         <a href="#" class="itemCategoria">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i> Outras categorias
+                            <i id="iconCat" class="fa-solid fa-magnifying-glass-plus"></i> Outras categorias
                         </a>
                     </div>
                 </div>
@@ -133,21 +125,87 @@
 
                     <div class="feedTimeLine"> <br>
                         <div id="list"></div>
-                        <button class="btn btn-primary">
-                            <a style="color: black" href="../perfil/perfil.html">Perfil</a>
-                        </button>
                     </div>
                 </div>
                
             </div>    
 
             <div class="col" id="chatDiv">
-                CHAT
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" id="search-bar">
+                </div>
+
+                <div class="contatos">
+                    <div id="tituloContatos">
+                        <span>Contatos</span>
+                    </div>
+                    <div class="itensContatos">
+                        <div class="itemContato">
+                            <img src="" alt=""> 
+                            <div class="ucsb">
+                                <span>Username</span>
+                                <a href="#">
+                                    <i class="fa-solid fa-plus" id="iconSeguir">
+                                        <span>Seguir</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemContato">
+                            <img src="" alt=""> 
+                            <div class="ucsb">
+                                <span>Username</span>
+                                <a href="#">
+                                    <i class="fa-solid fa-plus" id="iconSeguir">
+                                        <span>Seguir</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemContato">
+                            <img src="" alt=""> 
+                            <div class="ucsb">
+                                <span>Username</span>
+                                <a href="#">
+                                    <i class="fa-solid fa-plus" id="iconSeguir">
+                                        <span>Seguir</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemContato">
+                            <img src="" alt=""> 
+                            <div class="ucsb">
+                                <span>Username</span>
+                                <a href="#">
+                                    <i class="fa-solid fa-plus" id="iconSeguir">
+                                        <span>Seguir</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="itemContato">
+                            <img src="" alt=""> 
+                            <div class="ucsb">
+                                <span>Username</span>
+                                <a href="#">
+                                    <i class="fa-solid fa-plus" id="iconSeguir">
+                                        <span>Seguir</span>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 
+
             </div>
+
+                          
             
         </div>
 
     </div> 
-
 </body>
 </html>

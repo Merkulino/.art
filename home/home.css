@@ -1,3 +1,4 @@
+/*Se sobrar tempo, refatora o codigo dando as variaveis*/
 
 * {
     font-family: "Source Sans Pro", sans-serif;
@@ -46,7 +47,7 @@ button.btn-primary:hover{
     height: 100vh;
 }
 
-div.container {
+div.container-fluid {
     background-image: linear-gradient( 135deg, #892CDC 0%, #892CDC 100%);    
     background-size: cover;
     margin-top: 20px;
@@ -54,45 +55,67 @@ div.container {
     padding-top: 10px;
     max-width: 95%;
     border-radius:5pt;
-    overflow: auto;
+    overflow:auto;
+
+}
+.row{
+    position: relative;
 }
 
-
-.col-2{
+#perfilCat{
     background-color: #2c0242;
     margin-left: 10px;
+    padding: 20px;
     padding-bottom: 45px;
     border-radius: 5pt;
-    overflow: visible;
     border-radius: 10pt;
     margin-bottom: 10px;
+    max-width: 50%;
+    width: fit-content;
     height:fit-content;
 }
 
 div#imgPerfilDiv{
     max-width: 250px;
+    display: flex;
     margin-left: auto;
+    margin-right: auto;
+}
+
+figure.figure{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 img#perfilImg{
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #1d012d;
-    min-width: 100%;
+    min-width: 10vw;
+    min-height: 10vw;
 }
+
 
 #usernameCaption{
     color: #ead8f7;
-    font-size: 24px;
+    font-size: 28px;
+
     font-weight: bold;
 }
 
+@media screen and (max-width:1160px) {
+
+    figcaption#usernameCaption{
+        font-size: 22px;
+    }
+
+}
 div#cat{
     font-size: 18px;
-    padding: 20px;
-    padding-bottom: 0px;
+    padding: 20px 0 0 0;
     margin-bottom: 0px;
     border-radius: 5pt;
 
@@ -126,25 +149,19 @@ div#cat{
     background-color: #14061bcc;
     }
     
-i{
+#iconCat{
     width: 16px;
     margin-right: 8px;
 }
 
-span {
-    width: 16px;
-    margin-right: 8px;
-}
+div#feed{
 
-
-#feed{
     background-color: #2c0242;
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
     border-radius: 10pt;
     margin-bottom: 10px;
-    overflow: auto;
 }
 
 div#feedPost{
@@ -153,8 +170,8 @@ div#feedPost{
     background-color: #4d2e61;
     padding: 15px;
     border-radius: 5pt;
-
-    width: 100%; overflow: hidden;
+    
+    width: 100%;
 }
 
 
@@ -188,12 +205,12 @@ div.txtBoxDiv{
 }
 
 .postSelectors{
-
-    width: 100%; 
-    overflow: hidden;
+ 
     margin-left: 60px;
     margin-top: 20px;
-
+    display:flex;
+    align-items:stretch;
+    justify-content: space-between;
 }
 
 .fileInput>input{
@@ -201,26 +218,11 @@ div.txtBoxDiv{
 }
 
 div.fileInput{
-    width: 600px; float: left;
+    float: left;
 }
 
 #imgSelectIcon{
     font-size: 30px;
-}
-
-div.submitBt{
-    margin-left: 88%;
-    
-}
-
-
-
-div#feedTimeLine{
-    
-}
-
-div#parentDivFeed{
-    
 }
 
 div#divUserInfo{
@@ -274,7 +276,7 @@ div#divAction{
     display: grid;
     grid-auto-flow: column;
     justify-content:initial;
-    column-gap: 8px;
+    column-gap:normal;
 }
 
 #divAction>div{
@@ -319,9 +321,115 @@ div#divShare{
 
 
 div#chatDiv{
+    width: fit-content;
     margin-right: 10px;
     background-color: #2c0242;
     border-radius: 5pt;
     border-radius: 10pt;
     margin-bottom: 10px;
+    padding: 0 0 15px 0;
+    height: fit-content;
+    position: relative;
 }
+
+div.search-bar {
+    height: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    
+   }
+input#search-bar {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #1d012d;
+    border-radius: 10pt;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 20px 0 40px;
+    margin: 0px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.966 56.966' fill='%23717790c7'%3e%3cpath d='M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z'/%3e%3c/svg%3e");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 16px 48%;
+    
+}
+
+input#search-bar::placeholder{
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+input#search-bar:focus{
+    background-color: #000000;
+}
+
+div.contatos{
+    margin-top: 30px;
+}
+
+#tituloContatos{
+    font-size: 20px;
+    font-weight: 800;
+    padding: 0 18px;
+}
+
+div.itensContatos{
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.itemContato{
+    display:flex;
+    align-items: stretch;
+    flex-basis: auto;
+    flex-direction: row;
+    column-gap: 0px;
+    padding: 12px 18px;
+    transition: 0.3s;
+}
+div.ucsb{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.itemContato:hover{
+    background-color: #4d2e61;
+    border-radius: 5pt;
+}
+
+.itemContato>img{
+    content: 
+    url("https://cdn.icon-icons.com/icons2/1999/PNG/512/avatar_man_people_person_profile_user_icon_123375.png");
+    border:1px solid #1d012d;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.itemContato>span{
+   font-size: 15px;
+}
+
+#iconSeguir{
+    text-decoration: none;
+    color:#ead8f7;
+    font-size: 11pt;
+    padding: 8px 5px;
+    transition: 0.3s;
+}
+
+#iconSeguir:hover{
+
+    background-color: #14061bcc;
+    padding: 8px 5px;
+    border-radius: 5px;
+}
+
