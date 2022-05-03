@@ -330,6 +330,7 @@ div#chatDiv{
     padding: 0 0 15px 0;
     height: fit-content;
     position: relative;
+    min-width: 200px;
 }
 
 div.search-bar {
@@ -387,14 +388,16 @@ div.itensContatos{
     flex-basis: auto;
     flex-direction: row;
     column-gap: 0px;
-    padding: 12px 18px;
+    padding: 0.65vw 0.95vw;
     transition: 0.3s;
 }
 div.ucsb{
     display:flex;
     align-items:center;
     justify-content: space-between;
+    column-gap: 5px;
     width: 100%;
+    font-size: 0.9vw;
 }
 
 .itemContato:hover{
@@ -409,27 +412,23 @@ div.ucsb{
     border-radius: 50%;
     width: 45px;
     height: 45px;
-    margin-right: 15px;
+    margin-right: 0.6vw;
     object-fit: cover;
     object-position: center;
-}
-
-.itemContato>span{
-   font-size: 15px;
 }
 
 #iconSeguir{
     text-decoration: none;
     color:#ead8f7;
-    font-size: 11pt;
-    padding: 8px 5px;
+    font-size: 0.7vw;
+    padding: 8px 0.9px;
     transition: 0.3s;
 }
 
 #iconSeguir:hover{
 
     background-color: #14061bcc;
-    padding: 8px 5px;
+    padding: 8px 0.9px;
     border-radius: 5px;
 }
 
