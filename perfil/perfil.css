@@ -31,9 +31,78 @@ div.col-md-8{
 /* User Data */
 
 #userData{
-    height:500px;
-
+    height:fit-content;
     background-color: #1d012d;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+div.capa{
+    background-image: 
+    url('https://i.pinimg.com/originals/13/7f/ef/137fef307fb7c32ffb0803a6a9d3087c.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    height: 300px;
+    position: relative;
+}
+
+div.divCentral{
+    position: relative;
+    display: grid;
+    align-items: baseline;
+    grid-auto-flow: column;
+    margin-top: -108px;
+}
+
+div#imgPerfilDiv{
+    max-width: fit-content;
+    margin: 0 5px 0 15px;
+    position: relative;
+    display: grid;
+    align-items:center;
+    grid-auto-flow: column;
+    column-gap: 20px;
+}
+
+img#perfilImg{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1d012d;
+    min-width: 190px;
+    min-height: 190px;
+}
+
+div.infoUserName{
+    max-height: 82px;
+    width: fit-content;
+    justify-self:start;
+    font-size: 24px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+div.name{
+    font-weight: 500;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.btn{
+    align-self: center;
+    justify-self: end;
+}
+
+div.info{
+    height: fit-content;
+    background-color: #322344;
+    border-bottom: 2px solid #1d012d ;
+
 }
 
 /* FEED */
@@ -150,7 +219,25 @@ div#divAction{
     color: #ead8f7;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:850px) {
+
+    div.infoUserName{
+        max-height: 82px;
+        width: fit-content;
+        font-size: 2.2vw;
+        
+    }
+   
+}
+
+@media screen and (max-width:769spx) {
+
+    div.infoUserName{
+        max-height: 82px;
+        width: fit-content;
+        font-size: 20px;
+        
+    }
 
     div.selectors>div{
         width: 25vw;
