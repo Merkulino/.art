@@ -5,8 +5,22 @@
     box-sizing: border-box;
 }
 
+button.btn-primary{
+    color: rgb(255, 255, 255);
+    background-color: #7F22EF;
+    border-color: #7F22EF;
+    width: 100px;
+    border-radius: 99999px;
+}
+
+button.btn-primary:hover{
+    color: #ead8f7;
+    background-color: #5f2177;
+    border-color: #70268D;
+}
+
 body{
-    background-color: #322344;
+    background-color:#322344;;
     display: flex;
 }
 
@@ -14,11 +28,10 @@ div.container-fluid{
     width: 100%;
     height: 100%;
     justify-content: center;
-    background-color: yellowgreen;
 }
 div.row{
     justify-content: center;
-    background-color: #271b35;
+
 }
 
 div.col-md-8{
@@ -30,14 +43,15 @@ div.col-md-8{
 
 /* User Data */
 
-#userData{
+div#userData{
     height:fit-content;
-    background-color: #1d012d;
     padding: 0;
     display: grid;
     grid-auto-flow: row;
     justify-content: stretch;
     align-content: stretch;
+    border: 1px solid #1d012d;
+    border-bottom: none;
 }
 
 div.capa{
@@ -50,42 +64,58 @@ div.capa{
     position: relative;
 }
 
-div.divCentral{
+div.info{
+    height: fit-content;
+
+}
+
+div.infoUserElements{
+    display: grid;
+    grid-auto-flow:row;
+    margin: 0 20px 10px;
+}
+
+div.primaryInfoUser{
     position: relative;
     display: grid;
-    align-items: baseline;
+    align-items: center;
     grid-auto-flow: column;
+    height: 214px;
     margin-top: -108px;
 }
 
 div#imgPerfilDiv{
     max-width: fit-content;
-    margin: 0 5px 0 15px;
     position: relative;
     display: grid;
     align-items:center;
     grid-auto-flow: column;
     column-gap: 20px;
 }
+figure{
+    margin-bottom: 0;
+}
 
 img#perfilImg{
     width: 10vw;
     height: 10vw;
+    margin-bottom: 0;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #1d012d;
-    min-width: 190px;
-    min-height: 190px;
+    min-width: 150px;
+    min-height: 150px;
 }
 
 div.infoUserName{
     max-height: 82px;
     width: fit-content;
+    margin-top: 50%;
     justify-self:start;
-    font-size: 24px;
+    font-size: 14pt;
     display: grid;
     grid-auto-flow: row;
-    gap: 10px;
+    gap: 0px;
 }
 
 div.name{
@@ -98,11 +128,22 @@ div.name{
     justify-self: end;
 }
 
-div.info{
-    height: fit-content;
-    background-color: #322344;
-    border-bottom: 2px solid #1d012d ;
+div.secondaryUserInfo{
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 10px;
+}
 
+.personalInfos{
+    display: grid;
+    grid-auto-flow: row;
+    align-content: flex-start;
+    font-size: 11pt;
+}
+
+.personalInfos>span{
+    width: fit-content;
+    height: min-content;
 }
 
 /* FEED */
@@ -110,7 +151,8 @@ div.info{
 #userFeed{
     padding: 0ch;
     height:fit-content;
-    background-color: #322344;
+    border: 1px solid #1d012d ;
+
 }
 
 div.selectors{
@@ -120,7 +162,7 @@ div.selectors{
     grid-auto-flow: column;
     justify-content: center;
     column-gap: normal;
-    border-bottom: 2px solid #1d012d ;
+    border-bottom: 1px solid #1d012d ;
 }
 div.selectors>a{
     text-decoration: none;
@@ -142,7 +184,7 @@ div.selectors>a:hover{
 }
 
 div#listItem{
-    background-color: #1d012d;
+    background-color: #b1b1b11c;
     width: fit-content;
     height: fit-content;
     max-width: 600px;
@@ -193,6 +235,7 @@ img#imgFeed{
     width: 100%;
     object-fit: cover;
     border-radius: 5pt;
+    border: 1px solid #1d012d ;
 }
 
 div#divAction{
