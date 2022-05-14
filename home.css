@@ -42,11 +42,10 @@ button.btn-primary:hover{
     background-color: #21162D;
     background-size: cover;
     background-position: center;
-    display: flex;
     height: fit-content;
 }
 
-div.container-fluid {
+div#primaryContainer {
     background-color: #322344;
     height: fit-content;
     padding-top: 10px;
@@ -55,6 +54,9 @@ div.container-fluid {
 }
 .row{
     justify-content: center;
+}
+nav#navbar{
+    display: none;
 }
 
 /* Categorias */ 
@@ -291,29 +293,6 @@ div#divAction{
     color: #ead8f7;
 }
 
-div#divLike{ 
-    width: 95px;
-}
-
-.fa-thumbs-up{
-    margin: 0px;
-}
-
-div#divComment{
-    width: 125px;
-
-}
-.fa-comment{
-    margin-right: 0px;
-}
-
-div#divShare{
-    width: 167px;
-}
-.fa-share{
-    margin-right: 0px;
-
-}
 
 /* Contatos */ 
 
@@ -444,7 +423,12 @@ div.ucsb{
 
 }
 
-@media screen and (max-width:954px) {
+@media screen and (max-width:991px) {
+
+    div#primaryContainer {
+        margin-top: 58px;
+    }
+
 
     #perfilCat{
         display: none;
@@ -453,16 +437,103 @@ div.ucsb{
     div#feed{
         min-width: fit-content;
         max-width: fit-content;
+        width: max-content;
     }
 
     div#chatDiv{
         display: none;
     }
 
+    #containerNav{
+        padding: 0;
+        height: 50px;
+    }
+
+    nav#navbar{
+        display: grid;
+        justify-content: space-between;
+        grid-auto-flow: column;
+        background-color: #1d012d;
+        padding: 4px 8px;
+    }
+
+    div.search-bar {
+        height: 40px;
+        display:grid;
+        align-items: flex-end;
+        justify-content: end;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 4px;
+        
+       }
+    input#search-bar {
+        width: 150px;
+        height: 100%;
+        background-color: #1d012d;
+        padding: 0 20px 0 40px;
+        margin: 0px;
+    }
+    
 }
 
 @media screen and (max-width:500px) {
 
     /* Mobile resolution*/
+    div#primaryContainer {
+            margin: 58px 0 0 0;
+            padding: 0;
+
+    }
+    div.search-bar {
+        height: 40px;
+    }
+
+    input#search-bar {
+        width: 100px;
+        height: 100%;
+        background-color: #1d012d;
+        padding: 0 0px 0 32px;
+        margin: 0px;
+    }
+    div#feed{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #txtBox{
+        height: 60px;
+    }
+
+    #txtBox::placeholder{
+        font-size: 11pt;
+    }
+
+    #imgSelectIcon{
+        font-size: 18pt;
+    }
+
+    button.btn-primary{
+        font-size: 8pt;
+        width: 55px;
+        height: 30px;
+    }
+
+    div#feedPost{
+        border-radius: 0px;
+    }
+
+    div#listItem{
+        width: 100vw;
+        padding: 15px;
+        min-width: fit-content;
+        min-height: fit-content;
+        margin-bottom: 5px;
+        border-radius: 0px;
+    }
+
+    #tagA{
+        font-size:3.5vw;
+    }
 
 }

@@ -273,7 +273,7 @@ div#divAction{
    
 }
 
-@media screen and (max-width:769spx) {
+@media screen and (max-width:769px) {
 
     div.infoUserName{
         max-height: 82px;
@@ -288,7 +288,7 @@ div#divAction{
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
 
     /* Mobile resolution*/
 
