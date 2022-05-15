@@ -480,9 +480,16 @@ div.ucsb{
 @media screen and (max-width:500px) {
 
     /* Mobile resolution*/
+
+    .row{
+        width: min-content;
+        justify-content:space-evenly;
+
+    }
+
     div#primaryContainer {
             margin: 58px 0 0 0;
-            padding: 0;
+            padding: 0 0 0 5px;
 
     }
     div.search-bar {
@@ -497,6 +504,7 @@ div.ucsb{
         margin: 0px;
     }
     div#feed{
+        width:100%;
         margin: 0px;
         padding: 0px;
     }
@@ -526,7 +534,7 @@ div.ucsb{
     div#listItem{
         width: 100vw;
         padding: 15px;
-        min-width: fit-content;
+        min-width: 0px;
         min-height: fit-content;
         margin-bottom: 5px;
         border-radius: 0px;
