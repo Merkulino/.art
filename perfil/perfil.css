@@ -20,7 +20,7 @@ button.btn-primary:hover{
 }
 
 body{
-    background-color:#322344;;
+    background-color:#1f152b;;
     display: flex;
 }
 
@@ -50,7 +50,7 @@ div#userData{
     grid-auto-flow: row;
     justify-content: stretch;
     align-content: stretch;
-    border: 1px solid #1d012d;
+    border: 1px solid #45394d;
     border-bottom: none;
 }
 
@@ -103,7 +103,7 @@ img#perfilImg{
     margin-bottom: 0;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #1d012d;
+    border: 3px solid #1f152b;
     min-width: 150px;
     min-height: 150px;
 }
@@ -152,7 +152,7 @@ div.secondaryUserInfo{
 #userFeed{
     padding: 0ch;
     height:fit-content;
-    border: 1px solid #1d012d ;
+    border: 1px solid #45394d ;
 
 }
 
@@ -163,7 +163,7 @@ div.selectors{
     grid-auto-flow: column;
     justify-content: center;
     column-gap: normal;
-    border-bottom: 1px solid #1d012d ;
+    border-bottom: 1px solid #45394d ;
 }
 div.selectors>a{
     text-decoration: none;
@@ -185,7 +185,7 @@ div.selectors>a:hover{
 }
 
 div#listItem{
-    background-color: #b1b1b11c;
+    background-color: #2a2035;
     width: fit-content;
     height: fit-content;
     max-width: 600px;
@@ -277,15 +277,25 @@ div#divAction{
     div.infoUserName{
         max-height: 82px;
         width: fit-content;
-        font-size: 2.2vw;
-        
-    }
-
-    
+        font-size: 2.2vw;   
+    }   
    
 }
 
 @media screen and (max-width:769px) {
+
+    div#userData{
+        border: none;
+    }
+
+    #userFeed{
+        border: none;
+    }
+
+    div.selectors{
+       border-top: 1px solid #45394d;
+       border-bottom: 1px solid #45394d;
+    }
 
     div.capa{
         height: 35vw;

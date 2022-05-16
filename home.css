@@ -32,7 +32,6 @@ button.btn-primary{
 }
 
 button.btn-primary:hover{
-    color: #ead8f7;
     background-color: #5f2177;
     border-color: #70268D;
 }
@@ -46,9 +45,9 @@ button.btn-primary:hover{
 }
 
 div#primaryContainer {
-    background-color: #322344;
+    background-color: #1f152b;
     height: fit-content;
-    padding-top: 10px;
+    padding: 0px;
     overflow:auto;
     
 }
@@ -62,7 +61,6 @@ nav#navbar{
 /* Categorias */ 
 
 #perfilCat{
-    background-color: #322344;
     margin-left: 10px;
     padding: 20px;
     padding-bottom: 45px;
@@ -93,14 +91,14 @@ img#perfilImg{
     height: 10vw;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #1d012d;
+    border: 3px solid #1f152b;
     min-width: 10vw;
     min-height: 10vw;
 }
 
 
 #usernameCaption{
-    color: #ead8f7;
+    color: white;
     font-size: 28px;
 
     font-weight: bold;
@@ -126,7 +124,7 @@ div#cat{
 
 .itemCategoria {
     text-decoration: none;
-    color: #ead8f7;
+    color: white;
     display: flex;
     align-items: center;
     font-weight: 800;
@@ -149,19 +147,18 @@ div#cat{
 /* FEED */
 
 div#feed{
-    background-color: #322344;
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
-    border-radius: 10pt;
-    margin-bottom: 10px;
+    border-left: 1px solid #45394d;
+    border-right: 1px solid #45394d;
     min-width:min-content;
 }
 
 div#feedPost{
     color: white;
     min-height: 100%; 
-    background-color: #21162D;
+    background-color: #2a2035;
     padding: 15px;
     border-radius: 5pt;
     width: 100%;
@@ -192,22 +189,29 @@ div.txtBoxDiv{
 }
 
 #txtBox{
-    color: #ead8f7;
+    resize: none;
     text-decoration: none;
-    background-color: #1d012d;
-    border: 3px solid #322344;
+    color: white;
+    background-color: #4d2e6100;
+    border:#ffffff00;
+    border-radius: 0%;
+    border-bottom: 1.5px solid #45394d;
     margin-left: 50%; 
     height: 100px; 
     margin-left: 0px;
 }
 #txtBox::placeholder{
-    color: #eee1f7ce;
+    color: rgba(255, 255, 255, 0.63);
+}
+
+#txtBox:focus{
+    box-shadow: none;
 }
 
 .postSelectors{
  
     margin-left: 60px;
-    margin-top: 20px;
+    margin-top: 10px;
     display:flex;
     align-items:stretch;
     justify-content: space-between;
@@ -231,7 +235,7 @@ div#divUserInfo{
 }
 
 div#listItem{
-    background-color: #21162D;
+    background-color: #2a2035;
     width: fit-content;
     height: fit-content;
     max-width: 600px;
@@ -290,7 +294,7 @@ div#divAction{
 
 #tagA{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #ead8f7;
+    color: white;
 }
 
 
@@ -305,7 +309,6 @@ div#chatDiv{
     margin: 20px 10px 10px 0;
     border-radius: 5pt;
     padding: 0 0 15px 0;
-    background-color: #322344;
 }
 
 div.search-bar {
@@ -426,7 +429,7 @@ div.ucsb{
 @media screen and (max-width:991px) {
 
     div#primaryContainer {
-        margin-top: 58px;
+        margin-top: 53px;
     }
 
 
@@ -453,7 +456,9 @@ div.ucsb{
         display: grid;
         justify-content: space-between;
         grid-auto-flow: column;
-        background-color: #1d012d;
+        background-color: #2a2035f1;
+        backdrop-filter: blur(5px);
+        height: 53px;
         padding: 4px 8px;
     }
 
