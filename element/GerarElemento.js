@@ -25,13 +25,14 @@ export class GerarElemento{
 
         const imgIconDiv = document.createElement("div");
         imgIconDiv.setAttribute('class', 'perfilPostImgDiv');
-
         const imgPerfil = document.createElement("img");
         imgPerfil.setAttribute('id','perfilPostImg');
+        imgPerfil.setAttribute('onclick', " location.href='../perfil/perfil.html' ");
 
         const usernamePost = document.createElement("p");
         usernamePost.setAttribute('id', 'usernamePost');
         usernamePost.innerText = 'Usuario';
+        usernamePost.setAttribute('onclick', " location.href='../perfil/perfil.html' ");
 
         const prof = document.createElement("p");
         prof.setAttribute('id', 'profissaoTxt');

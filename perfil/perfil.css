@@ -27,6 +27,7 @@ body{
 div.container-fluid{
     width: 100%;
     height: 100%;
+    margin-top: 50px;
     justify-content: center;
 }
 div.row{
@@ -39,6 +40,38 @@ div.col-md-8{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+#containerNav{
+    padding: 0;
+    height: 50px;
+}
+
+nav#navbar{
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    background-color: #2a2035f1;
+    backdrop-filter: blur(5px);
+    height: 53px;
+    padding: 4px 8px;
+}
+div.search-bar {
+    height: 40px;
+    display:grid;
+    align-items: flex-end;
+    justify-content: end;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    
+   }
+input#search-bar {
+    width: 150px;
+    height: 100%;
+    background-color: #1d012d;
+    padding: 0 20px 0 40px;
+    margin: 0px;
 }
 
 /* User Data */
