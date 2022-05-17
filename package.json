@@ -2,12 +2,14 @@
   "name": "art",
   "version": "1.0.0",
   "description": "social media for artists",
-  "main": "./home/home.js",
+  "main": "./home.js",
+  "homepage": "https://merkulino.github.io/Art/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "art"
+    "art",
+    "social-media"
   ],
   "author": "Filliphi Perez & Melqui Brito",
   "license": "ISC",

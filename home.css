@@ -12,12 +12,12 @@
 }
 
 ::-webkit-scrollbar-track{
-    background-color: #15202B;
+    background-color: #1f152b;
     margin-right: 5px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #2c0242;
+    background: #45394d;
     border-radius: 5pt;
 }
 
@@ -62,8 +62,7 @@ nav#navbar{
 
 #perfilCat{
     margin-left: 10px;
-    padding: 20px;
-    padding-bottom: 45px;
+    padding: 25px 25px 45px;
     border-radius: 5pt;
     border-radius: 10pt;
     margin-bottom: 10px;
@@ -149,7 +148,7 @@ div#cat{
 div#feed{
     margin-left: 10px;
     margin-right: 10px;
-    padding: 20px;
+    padding: 25px;
     border-left: 1px solid #45394d;
     border-right: 1px solid #45394d;
     min-width:min-content;
@@ -306,9 +305,8 @@ div#chatDiv{
     height: fit-content;
     min-width: 200px;
     max-width: 280px;
-    margin: 20px 10px 10px 0;
     border-radius: 5pt;
-    padding: 0 0 15px 0;
+    padding: 25px 5px;
 }
 
 div.search-bar {
@@ -429,7 +427,7 @@ div.ucsb{
 @media screen and (max-width:991px) {
 
     div#primaryContainer {
-        margin-top: 53px;
+        margin-top: 40px;
     }
 
 
