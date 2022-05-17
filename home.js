@@ -1,5 +1,5 @@
-import { ListaPost } from './shared/list.js';
-import { Post } from './shared/post.js'
+import { ListaPost } from '../shared/list.js';
+import { Post } from '../shared/post.js'
 
 var lista = new ListaPost();
 var post = new Post();
