@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "social media for artists",
   "main": "./home.js",
-  "homepage": "https://merkulino.github.io/Art/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
