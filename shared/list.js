@@ -26,7 +26,6 @@ export class ListaPost {
 
     getImg(){
         const imgLocal =  localStorage.getItem('image');
-        
         this._img = imgLocal;
         console.log(imgLocal);
     }
@@ -51,9 +50,7 @@ export class ListaPost {
         this.paternDiv(element);
         
         for(var i=0;i<lista.length;i++){
-
             this._novoElemento.gerarNovaPostagem(lista[i], this._parentDiv);
-            
         }
     }
 
@@ -64,12 +61,10 @@ export class ListaPost {
         element.insertAdjacentElement('afterbegin', parentDiv);
 
         this._parentDiv = parentDiv;
-
     }
     
     //Atualizar lista armazenada
     updateLocalStorage = () => {
         localStorage.setItem('lista', JSON.stringify(lista));
     }
-
 }

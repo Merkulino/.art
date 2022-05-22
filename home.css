@@ -99,14 +99,13 @@ img#perfilImg{
 #usernameCaption{
     color: white;
     font-size: 28px;
-
     font-weight: bold;
 }
 
 div#cat{
     font-size: 18px;
-    padding: 20px 0 0 0;
-    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 10px;
     border-radius: 5pt;
 }
 
@@ -127,7 +126,7 @@ div#cat{
     display: flex;
     align-items: center;
     font-weight: 800;
-    padding: 10px;
+    padding: 5px;
     font-size: 14px;
     border-radius: 6px;
     transition: 0.3s;
@@ -142,6 +141,8 @@ div#cat{
     width: 16px;
     margin-right: 8px;
 }
+
+
 
 /* FEED */
 

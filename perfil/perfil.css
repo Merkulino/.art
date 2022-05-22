@@ -5,6 +5,24 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #1f152b;
+    margin-right: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #45394d;
+    border-radius: 5pt;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #2c0242d5;
+}
+
 button.btn-primary{
     color: rgb(255, 255, 255);
     background-color: #7F22EF;
