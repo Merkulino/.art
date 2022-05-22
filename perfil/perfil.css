@@ -383,21 +383,7 @@ div#divAction{
 
     /* Mobile resolution*/
 
-    div.container-fluid{
-
-    }
-
-    div.container-fluid>div.row{
-
-    }
-
-    div#userData{
-    }
-    div#userFeed{
-    }
-
     div.capa{
-
         min-height: 150px;
     }
 

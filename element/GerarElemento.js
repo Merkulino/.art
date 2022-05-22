@@ -1,3 +1,7 @@
+import { CurrentUser } from "../userData/currentUser.js";
+
+var currentUser = new CurrentUser;
+
 export class GerarElemento{
 
 
@@ -31,12 +35,12 @@ export class GerarElemento{
 
         const usernamePost = document.createElement("p");
         usernamePost.setAttribute('id', 'usernamePost');
-        usernamePost.innerText = 'Usuario';
+        usernamePost.innerText = currentUser.getUsername;
         usernamePost.setAttribute('onclick', " location.href='../perfil/perfil.html' ");
 
         const prof = document.createElement("p");
         prof.setAttribute('id', 'profissaoTxt');
-        prof.innerText = 'Profissão';
+        prof.innerText = currentUser.getProfissa;
         
         //action div
         const divAction = document.createElement("div");

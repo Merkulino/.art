@@ -38,7 +38,7 @@ button.btn-primary:hover{
 
 #body{
     color: white;
-    background-color: #21162D;
+    background-color: #1f152b;
     background-size: cover;
     background-position: center;
     height: fit-content;
@@ -49,10 +49,10 @@ div#primaryContainer {
     height: fit-content;
     padding: 0px;
     overflow:auto;
-    
 }
 .row{
     justify-content: center;
+    width: 100%;
 }
 nav#navbar{
     display: none;
@@ -158,10 +158,11 @@ div#feed{
 div#feedPost{
     color: white;
     min-height: 100%; 
+    width: 100%;
+    height: fit-content;
     background-color: #2a2035;
     padding: 15px;
     border-radius: 5pt;
-    width: 100%;
 }
 
 div.feedTimeLine{
@@ -431,15 +432,20 @@ div.ucsb{
         margin-top: 40px;
     }
 
-
     #perfilCat{
         display: none;
     }
 
     div#feed{
-        min-width: fit-content;
+        min-width: 500px;
         max-width: fit-content;
         width: max-content;
+        border: none;
+    }
+
+    div#feedPost{
+        width: 30vw;
+        min-width: 100%;
     }
 
     div#chatDiv{
@@ -486,14 +492,14 @@ div.ucsb{
     /* Mobile resolution*/
 
     .row{
-        width: min-content;
-        justify-content:space-evenly;
-
+        width: 100%;
+        min-width: 0px;
+        max-width: 0px;
     }
 
     div#primaryContainer {
-            margin: 58px 0 0 0;
-            padding: 0 0 0 5px;
+        margin: 58px 0 0 0;
+        padding: 0 0 0 5px;
 
     }
     div.search-bar {
@@ -511,6 +517,11 @@ div.ucsb{
         width:100%;
         margin: 0px;
         padding: 0px;
+        min-width: 0;
+    }
+    div#feedPost{
+        width: 100vw;
+        min-width: 0;
     }
 
     #txtBox{
@@ -539,9 +550,14 @@ div.ucsb{
         width: 100vw;
         padding: 15px;
         min-width: 0px;
-        min-height: fit-content;
+        min-height: 100vw;
         margin-bottom: 5px;
         border-radius: 0px;
+    }
+
+    img#imgFeed{
+        width: 98%;
+        max-width: 100vw;
     }
 
     #tagA{
