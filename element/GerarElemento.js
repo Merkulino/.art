@@ -1,4 +1,4 @@
-import { CurrentUser } from "../userData/currentUser.js";
+import { CurrentUser } from "../userData/CurrentUser.js";
 
 var currentUser = new CurrentUser();
 
