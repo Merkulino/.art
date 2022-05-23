@@ -1,6 +1,6 @@
 import { CurrentUser } from "../userData/currentUser.js";
 
-var currentUser = new CurrentUser;
+var currentUser = new CurrentUser();
 
 export class GerarElemento{
 

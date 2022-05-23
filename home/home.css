@@ -169,6 +169,11 @@ div.feedTimeLine{
     margin-top: 15px;
 }
 
+div#parentDivFeed{
+    background-color: yellowgreen;
+   
+}
+
 div.perfilPostImgDiv{
     float: left;
 }

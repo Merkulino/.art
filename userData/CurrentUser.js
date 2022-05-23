@@ -3,7 +3,7 @@ var storage = JSON.parse(localStorage.getItem('currentUser'));
 export class CurrentUser {
 
     _id;
-    _name = "Nome Completo"
+    _name = "Nome_Completo"
     _userName = 'Username';
     _profissa = 'Profissão';
     _email = 'Email@mail.com';
@@ -13,7 +13,7 @@ export class CurrentUser {
 
     constructor(){}
 
-    newCurrentUser(id, name , userName, profissa, email){
+    newCurrentUser(id, name, userName, profissa, email){
 
         let objUser = {id: id, name: name, username: userName, profissa: profissa, email: email};
         storage = objUser;
@@ -38,7 +38,7 @@ export class CurrentUser {
         if(storage != null){
             return storage.name;
         }
-        return this.name
+        return this._name;
     }
     
     set setName(name){

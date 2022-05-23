@@ -27,7 +27,7 @@ btSubmit.onclick = function() {
             if(senhaTxt.value != usr.senha){
                 alert('senha invalida');
             }else{
-                newUser.newCurrentUser(usr.id, usr.name, usr.username, usr.profissa, usr.email);
+                newUser.newCurrentUser(usr.id, usr.nome, usr.username, usr.profissa, usr.email);
                 window.location.href = "../../home/home.html";
             }
             break;
