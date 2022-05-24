@@ -17,10 +17,15 @@ export class ListaPost {
     constructor(){}
 
     //Verificar se contem post no JSON e ja criar elemento 
-    verifyFeed(element){
+    verifyFeed(element, deletElement){
         if(localStorageTransaction !== null){
+
+            deletElement.parentNode.removeChild(deletElement);
+
             this.updateLocalStorage();
             this.showLista(element);
+        }else{
+            console.log('chamou else na verificação');
         }
     }
 

@@ -15,10 +15,11 @@ var txtBox = document.getElementById('txtBox');
 var img = document.getElementById('imgSelec');
 var btSubmit = document.getElementById('btSubmit');
 const ul = document.getElementById('list');
+const element = document.getElementById('emptyPost');
 
 post.inserirImg(img);
 
-lista.verifyFeed(ul);
+lista.verifyFeed(ul, element);
 
 //Lista de objetos
 btSubmit.onclick = function(){
@@ -39,6 +40,19 @@ btExit.onclick = function (){
   localStorage.removeItem('lista');
   window.location.href = "../index.html";
 
+}
+
+//sideNav
+var openNav = document.getElementById('openNav');
+
+openNav.onclick = function() {
+  document.getElementById("mySidenav").style.width = "250px";
+
+}
+var closeNav = document.getElementById('close');
+
+closeNav.onclick = function() {
+  document.getElementById("mySidenav").style.width = "0";
 }
 
 

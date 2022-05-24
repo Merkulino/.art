@@ -58,6 +58,52 @@ nav#navbar{
     display: none;
 }
 
+/* sidenav */
+.sidenav {
+    display: grid;
+    grid-auto-flow: row;
+    height: 100vw;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(26, 17, 26, 0.979);
+    backdrop-filter: blur(12px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    border-radius: 10pt;
+  }
+  
+  .sidenav>a {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fdfafa;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav>a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav>.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .select{
+    padding: 1px;  
+    background-color: #45394d;
+    border-radius: 2pt;
+    appearance: none;
+  }
+
 /* Categorias */ 
 
 #perfilCat{
@@ -156,6 +202,9 @@ div#feed{
 }
 
 div#feedPost{
+    display: grid;
+    grid-auto-flow:row;
+    align-items: center;
     color: white;
     min-height: 100%; 
     width: 100%;
@@ -167,10 +216,6 @@ div#feedPost{
 
 div.feedTimeLine{
     margin-top: 15px;
-}
-
-div#parentDivFeed{
-   
 }
 
 div.perfilPostImgDiv{
@@ -237,6 +282,20 @@ div.fileInput{
 div#divUserInfo{
     height: 55px;
     margin-bottom: 10px;
+}
+
+div#emptyPost{
+    background-color: #2a2035;
+    width: max-content;
+    height: min-content;
+    display: grid;
+    grid-auto-flow:row;
+    align-items: center;
+    min-width: 300px;
+    min-height: fit-content;
+    margin-bottom: 10px;
+    padding: 25px;
+    border-radius: 5pt;
 }
 
 div#listItem{
@@ -494,6 +553,17 @@ div.ucsb{
 @media screen and (max-width:500px) {
 
     /* Mobile resolution*/
+
+    div.sidenav{
+        padding-top: 30px;
+        width: 60vw;
+        min-width: 0px;
+        
+    }
+
+    .sidenav>a{
+        font-size: 10pt;
+    }
 
     .row{
         width: 100%;

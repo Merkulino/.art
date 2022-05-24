@@ -20,8 +20,35 @@
 
     <nav class="navbar fixed-top" id="navbar">
         <div class="container-fluid" id="containerNav">
-            <a class="navbar-brand">Navbar</a>
+            <div id="mySidenav" class="sidenav fixed-top">
+                <a href="javascript:void(0)" id="close" class="closebtn">&times;</a>
+                <a href="../perfil/perfil.html">Perfil</a>
+                <a href="#">Regiões
+                 <select class="select">
+                    <option value="Zona-Sul">Zona-Sul</option>
+                    <option value="Zona-Leste">Zona-Leste</option>
+                    <option value="Zona-Oeste">Zona-Oeste</option>
+                    <option value="Zona-Norte">Zona-Norte</option>
+                    <option value="Centro">Centro</option>
+                    <option value="Outro">Outras Regiões</option>
+                  </select>
+                </a>
+                <a>Categorias
+                <select class="select">
+                    <option value="Musica">Musica</option>
+                    <option value="Cinema">Cinema</option>
+                    <option value="Teatro">Teatro</option>
+                    <option value="Graffiti">Graffiti</option>
+                    <option value="Art Design">Art Design</option>
+                    <option value="Global">Global</option>
+                  </select>
+                </a> 
+                <a href="https://github.com/Merkulino">Codigo-Fonte</a>
+                <button class="btn btn-primary" type="submit" id="btExit">Sair</button>
+              </div>
+            <a class="navbar-brand" id="openNav" >Navbar</a>
         </div>
+        
         <div class="search-bar">
                 <input type="text" placeholder="Search" id="search-bar">
         </div>
@@ -140,7 +167,14 @@
                     </div>
 
                     <div class="feedTimeLine">
-                        <div id="list"></div>
+                        <div id="list">
+                            <div id="emptyPost">
+                                    <div id="postDefault">
+                                        <h2>Voce ainda não tem publicação.</h2> 
+                                            <h2>Faça uma nova postagem!</h2>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                
