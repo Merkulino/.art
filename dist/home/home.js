@@ -37,7 +37,7 @@ btExit.onclick = function (){
 
   //Verificar se o usuario realmente quer sair da pagina
   localStorage.removeItem('currentUser');
-  window.location.href = "../index.html";
+  window.location.href = "/index.html";
 
 }
 

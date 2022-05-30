@@ -28,7 +28,7 @@ btSubmit.onclick = function() {
                 alert('senha invalida');
             }else{
                 newUser.newCurrentUser(usr.id, usr.nome, usr.username, usr.profissa, usr.email);
-                window.location.href = "../../home/home.html";
+                window.location.href = "/dist/home/home.html";
             }
             break;
         }

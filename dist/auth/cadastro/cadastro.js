@@ -32,7 +32,7 @@ bt.onclick = function(){
         users.unshift(userObjeto);
         localStorage.setItem('users', JSON.stringify(users));
         alert('Novo usuario salvo no sistema, faça o login para acessar sua nova conta!');
-        window.location.href = "../../index.html";
+        window.location.href = "/index.html";
     }else{
         console.log(userObjeto +'n salvou');
     }  
