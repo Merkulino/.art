@@ -9,7 +9,7 @@ var currentUser = new CurrentUser();
 var usernameTitle = document.getElementById('usernameCaption');
 usernameTitle.innerText= currentUser.getUsername;
 
-var btExit = document.querySelector('button#btExit');
+var btExit = document.getElementById('btExit');
 
 var txtBox = document.getElementById('txtBox');
 var img = document.getElementById('imgSelec');
@@ -37,6 +37,7 @@ btExit.onclick = function (){
 
   //Verificar se o usuario realmente quer sair da pagina
   localStorage.removeItem('currentUser');
+  localStorage.removeItem('lista');
   window.location.href = "../index.html";
 
 }
