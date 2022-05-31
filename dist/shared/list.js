@@ -1,4 +1,5 @@
 import { GerarElemento } from "../element/GerarElemento.js";
+import { CurrentUser } from "../userData/CurrentUser.js";
 
 //Cria um local de armazenamento e fazer verificação para armazenar
 const localStorageTransaction = JSON.parse(
@@ -8,54 +9,70 @@ const localStorageTransaction = JSON.parse(
 let lista = localStorage.getItem('lista') !== null ? 
     localStorageTransaction : [];
 
+var currentUser = new CurrentUser();
+
 export class ListaPost {
 
     _novoElemento = new GerarElemento();
     _parentDiv;
+    _userID = currentUser.getID;
     _img;
 
     constructor(){}
 
     //Verificar se contem post no JSON e ja criar elemento 
     verifyFeed(element, deletElement){
-        if(localStorageTransaction !== null){
+        if(localStorageTransaction !== null ){
 
-            deletElement.parentNode.removeChild(deletElement);
-
-            this.updateLocalStorage();
-            this.showLista(element);
-        }else{
-            console.log('chamou else na verificação');
+            for(let i=0;i<lista.length; i++) {
+            
+                if(lista[i].userID == this._userID){
+                    deletElement.parentNode.removeChild(deletElement);
+        
+                    this.updateLocalStorage();
+                    this.showLista(element);
+                    console.log('loop'+i)
+                    break;
+                }   
+            }   
         }
     }
 
     getImg(){
         const imgLocal =  localStorage.getItem('image');
         this._img = imgLocal;
-        console.log(imgLocal);
     }
 
     novaPostagem(element, _txt) {
 
         let _id = Math.floor(Date.now() * Math.random()).toString(36);
-
+        //this.getCurrentUserID();
         this.getImg();
-        let novoObjeto = {id: _id, txtPost: _txt, img: this._img};
 
+        let novoObjeto = {id: _id, userID: this._userID, txtPost: _txt, img: this._img};
+        
         lista.unshift(novoObjeto);
         this.updateLocalStorage();
 
         this.paternDiv(element);
         this._novoElemento.gerarNovaPostagem(novoObjeto, this._parentDiv);
+
+        localStorage.removeItem('image');
             
     }
 
     showLista(element){
 
         this.paternDiv(element);
-        
-        for(var i=0;i<lista.length;i++){
-            this._novoElemento.gerarNovaPostagem(lista[i], this._parentDiv);
+
+       
+        let arrayFiltrada = lista.filter(function(filtro){
+            return filtro.userID == currentUser.getID;
+        });
+
+        //trocar essa lista do for pelo array que vai ser criado.
+        for(var i=0;i<arrayFiltrada.length;i++){
+            this._novoElemento.gerarNovaPostagem(arrayFiltrada[i], this._parentDiv);
         }
     }
 

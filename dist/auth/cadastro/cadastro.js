@@ -1,16 +1,14 @@
+
 const localStorageTransaction = JSON.parse(
     localStorage.getItem('users'));
-
 let users = localStorage.getItem('users') !== null ? 
     localStorageTransaction : [];
 
 var verifyContent = false;
-
 var bt = document.getElementById('btn-primary');
-
 bt.onclick = function(){
 
-    //Find by id de todos elementos
+    //Find id de todos elementos
     const dados = Array.from( document.querySelectorAll('input')).reduce(
         (acc, input) => ({...acc, [input.id]: input.value }), {} );
     

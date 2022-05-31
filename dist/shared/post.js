@@ -19,7 +19,7 @@ export class Post {
             //FileReader vai converter em uma data URL e add em um localStorage 
           
             reader.addEventListener("load", () => {
-                const lista = localStorage.setItem('image', reader.result);
+                localStorage.setItem('image', reader.result);
             });
             
             reader.readAsDataURL(this.files[0]);

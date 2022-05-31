@@ -50,7 +50,6 @@ div.container-fluid{
 }
 div.row{
     justify-content: center;
-
 }
 
 div.col-md-8{
@@ -74,6 +73,12 @@ nav#navbar{
     height: 53px;
     padding: 4px 8px;
 }
+
+div#backArrowDiv{
+    padding-left: 5px;
+    font-size: 18pt;
+}
+
 div.search-bar {
     height: 40px;
     display:grid;

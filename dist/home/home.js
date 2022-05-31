@@ -30,7 +30,7 @@ btSubmit.onclick = function(){
     }
 
     //Limpar txtBox essas parada  !!!
-   
+    //txtBox.innerText ='';
 }
 
 btExit.onclick = function (){
