@@ -198,7 +198,7 @@ div#feed{
     padding: 25px;
     border-left: 1px solid #45394d;
     border-right: 1px solid #45394d;
-    min-width:min-content;
+    min-width: min-content;
 }
 
 div#feedPost{
@@ -212,10 +212,6 @@ div#feedPost{
     background-color: #2a2035;
     padding: 15px;
     border-radius: 5pt;
-}
-
-div.feedTimeLine{
-    margin-top: 15px;
 }
 
 div.perfilPostImgDiv{
@@ -284,6 +280,13 @@ div#divUserInfo{
     margin-bottom: 10px;
 }
 
+div.feedTimeLine{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
 div#emptyPost{
     background-color: #2a2035;
     width: max-content;
@@ -301,10 +304,9 @@ div#emptyPost{
 div#listItem{
     background-color: #2a2035;
     width: fit-content;
-    height: fit-content;
+    height: min-content;
     max-width: 600px;
-    min-height: 350px;
-    margin-bottom: 10px;
+    margin: 20px 5px 10px;
     padding: 25px;
     border-radius: 5pt;
     overflow: hidden;
@@ -335,6 +337,8 @@ img#imgFeed{
     width: 100%;
     object-fit: cover;
     border-radius: 5pt;
+    border: 1px solid #1d012d;
+
 }
 
 div#divAction{
@@ -558,23 +562,14 @@ div.ucsb{
         padding-top: 30px;
         width: 60vw;
         min-width: 0px;
-        
     }
 
     .sidenav>a{
         font-size: 10pt;
     }
 
-    .row{
-        width: 100%;
-        min-width: 0px;
-        max-width: 0px;
-    }
-
     div#primaryContainer {
         margin: 58px 0 0 0;
-        padding: 0 0 0 5px;
-
     }
     div.search-bar {
         height: 40px;
@@ -588,14 +583,16 @@ div.ucsb{
         margin: 0px;
     }
     div#feed{
-        width:100%;
-        margin: 0px;
-        padding: 0px;
-        min-width: 0;
-    }
-    div#feedPost{
         width: 100vw;
         min-width: 0;
+        max-width: fit-content;
+        margin: 0px;
+        padding: 0 15px;
+        
+    }
+    div#feedPost{
+        width: 97vw;
+        min-width: fit-content;
     }
 
     #txtBox{
@@ -620,12 +617,16 @@ div.ucsb{
         border-radius: 0px;
     }
 
+    div.feedTimeLine{
+        margin-top: 15px;
+        display: block;
+    }
+
     div#listItem{
-        width: 100vw;
+        width: 97vw;
+        min-width: fit-content;
         padding: 15px;
-        min-width: 0px;
-        min-height: 100vw;
-        margin-bottom: 5px;
+        margin: 0 0 5px 0;
         border-radius: 0px;
     }
 
