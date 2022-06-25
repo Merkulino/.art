@@ -57,7 +57,7 @@ bem estruturado e que traga uma boa experiência ao usuario, com isso, pretendem
 Estas são nossas principais ideias de trabalhos futuros e ainda falta um longo caminho de desenvolvimento, que eu particularmente estou bem ansioso para
 aprender e desenvolver.
 
-E caso queira acessar nosso site e acompanhar o desenvolvimento, [clique aqui](https://merkulino.github.io/)
+E caso queira acessar nosso site e acompanhar o desenvolvimento, [clique aqui](https://projetoart-d923c.web.app)
 
 ## 📚 Arquivos de pesquisa
 
