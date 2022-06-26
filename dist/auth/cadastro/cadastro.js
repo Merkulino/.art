@@ -1,3 +1,4 @@
+import api from "../fireConfig/api.js"
 
 const localStorageTransaction = JSON.parse(
     localStorage.getItem('users'));
@@ -27,10 +28,17 @@ bt.onclick = function(){
     }
 
     if(verifyContent){
-        users.unshift(userObjeto);
-        localStorage.setItem('users', JSON.stringify(users));
-        alert('Novo usuario salvo no sistema, faça o login para acessar sua nova conta!');
-        window.location.href = "/index.html";
+
+        /*  O codigo está salvando usuario no Firebase Auth
+            Agora preciso trabalhar aquelas verificações de senha fraca email e tal
+            E localStorage, decidir como vai trabalhar esse codigo antigo
+        */
+
+        //users.unshift(userObjeto);
+        //localStorage.setItem('users', JSON.stringify(users));
+        api.signin(userObjeto.email, userObjeto.senha);
+        //alert('Novo usuario salvo no sistema, faça o login para acessar sua nova conta!');
+        //window.location.href = "/index.html";
     }else{
         console.log(userObjeto +'n salvou');
     }  
