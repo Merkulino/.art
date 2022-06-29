@@ -28,19 +28,9 @@ bt.onclick = function(){
     }
 
     if(verifyContent){
-
-        /*  O codigo está salvando usuario no Firebase Auth
-            Agora preciso trabalhar aquelas verificações de senha fraca email e tal
-            E localStorage, decidir como vai trabalhar esse codigo antigo
-        */
-
-        //users.unshift(userObjeto);
-        //localStorage.setItem('users', JSON.stringify(users));
-        api.signin(userObjeto.email, userObjeto.senha);
-        //alert('Novo usuario salvo no sistema, faça o login para acessar sua nova conta!');
-        //window.location.href = "/index.html";
+        api.signin(userObjeto.username, userObjeto.nome, userObjeto.profissa, userObjeto.email, userObjeto.senha) ;
     }else{
-        console.log(userObjeto +'n salvou');
+        alert("usuario não cadastrado");
     }  
 }
 
