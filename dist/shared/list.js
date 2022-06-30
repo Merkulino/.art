@@ -31,7 +31,6 @@ export class ListaPost {
         
                     this.updateLocalStorage();
                     this.showLista(element);
-                    console.log('loop'+i)
                     break;
                 }   
             }   

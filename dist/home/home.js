@@ -2,9 +2,8 @@ import { ListaPost } from '../shared/list.js';
 import { Post } from '../shared/post.js'
 import { CurrentUser } from '../userData/CurrentUser.js';
 
-import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import {getAuth, signOut} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import api from "../auth/fireConfig/api.js"
-
 
 var lista = new ListaPost();
 var post = new Post();
@@ -21,18 +20,6 @@ var img = document.getElementById('imgSelec');
 var btSubmit = document.getElementById('btSubmit');
 const ul = document.getElementById('list');
 const element = document.getElementById('emptyPost');
-
-//Firebase CurrentUser
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    
-    console.log(user.uid);
-
-  } else {
-    console.log("erro! Usuario não logado");
-  }
-});
-
 
 post.inserirImg(img);
 
@@ -53,8 +40,8 @@ btSubmit.onclick = function(){
 btExit.onclick = function (){
 
   //Verificar se o usuario realmente quer sair da pagina
-  //localStorage.removeItem('currentUser');
   signOut(auth).then(() => {
+    localStorage.removeItem('currentUser');
     window.location.href = "/index.html";
   }).catch((error) => {
     alert("Erro ao sair, tente novamente");
