@@ -257,6 +257,10 @@ div#listItem{
     overflow: hidden;
 }
 
+div#divUserInfo{
+    max-width: 190px;
+}
+
 div.perfilPostImgDiv{
     float: left;
 }
