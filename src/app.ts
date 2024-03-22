@@ -1,15 +1,12 @@
 import express from 'express';
+import { comentarios, publicacoes, usuarios } from './routes';
 
 const app = express();
-
 app.use(express.json());
 
-const router = express.Router();
-
-router.get("/Teste", (_req, res) => {
-  res.status(200).json({"deu": "bom"});
-});
-
-app.use(router);
+//Routes
+app.use(publicacoes);
+app.use(comentarios);
+app.use(usuarios);
 
 export default app;
