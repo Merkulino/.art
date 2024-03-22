@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import FirebaseInit from '../firebase/firebase';
 
 class UsuariosController {
     
@@ -12,9 +13,10 @@ class UsuariosController {
         //const : number = req.body;
         //const result = await this._service.getUser();
         
-        const result = "Teste";
+        const fireInit = new FirebaseInit();
+        fireInit.logarUsuario("teste@mail.com", "senha123");
         
-        res.status(201).json({ message: result });
+        res.status(201).json({ message: "fireInit" });
       }
 
 }
